@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: estoque-service
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: estoque-service
+
+  template:
+    metadata:
+      labels:
+        app: estoque-service
+
+    spec:
+      containers:
+        - name: estoque-service
+
+          image: estoque-service:1.0.0
+
+          ports:
+            - containerPort: 3003
+
+          env:
+            - name: NODE_ENV
+              value: production
