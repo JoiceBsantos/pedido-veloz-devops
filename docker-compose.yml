@@ -1,0 +1,66 @@
+version: '3.9'
+
+services:
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+
+    ports:
+      - "3000:3000"
+
+    networks:
+      - pedido-veloz-network
+
+  pedidos-service:
+    build:
+      context: ./pedidos-service
+
+    ports:
+      - "3001:3001"
+
+    networks:
+      - pedido-veloz-network
+
+  pagamentos-service:
+    build:
+      context: ./pagamentos-service
+
+    ports:
+      - "3002:3002"
+
+    networks:
+      - pedido-veloz-network
+
+  estoque-service:
+    build:
+      context: ./estoque-service
+
+    ports:
+      - "3003:3003"
+
+    networks:
+      - pedido-veloz-network
+
+  postgres:
+    image: postgres:16-alpine
+
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: pedido_veloz
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    networks:
+      - pedido-veloz-network
+
+volumes:
+  postgres_data:
+
+networks:
+  pedido-veloz-network:
