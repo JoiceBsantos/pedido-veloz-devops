@@ -1,0 +1,10 @@
+apiVersion: v1
+
+kind: ConfigMap
+
+metadata:
+  name: pedidos-config
+
+data:
+  NODE_ENV: "production"
+  SERVICE_NAME: "pedidos-service"
