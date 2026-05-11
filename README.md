@@ -28,3 +28,12 @@ Demonstrar uma arquitetura cloud-native com:
 - observabilidade
 - escalabilidade
 - automação
+
+## Observabilidade
+
+O projeto utiliza:
+
+- Prometheus
+- Grafana
+
+para monitoramento e observabilidade da arquitetura de microsserviços.
