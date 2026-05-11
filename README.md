@@ -52,3 +52,14 @@ Documentações disponíveis:
 - estratégia DevOps
 - observabilidade
 - Terraform IaC
+
+## Segurança e Escalabilidade
+
+O projeto utiliza:
+
+- Kubernetes Secrets
+- Horizontal Pod Autoscaler (HPA)
+- readinessProbe
+- livenessProbe
+
+para aumentar segurança, disponibilidade e escalabilidade.
