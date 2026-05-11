@@ -37,3 +37,7 @@ O projeto utiliza:
 - Grafana
 
 para monitoramento e observabilidade da arquitetura de microsserviços.
+
+## Infrastructure as Code
+
+O projeto utiliza Terraform para provisionamento e automação da infraestrutura Kubernetes.
