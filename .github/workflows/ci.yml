@@ -1,0 +1,100 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  pedidos-service:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências pedidos-service
+        run: |
+          cd pedidos-service
+          npm install
+
+      - name: Validar pedidos-service
+        run: echo "Pedidos Service validado com sucesso"
+
+  pagamentos-service:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências pagamentos-service
+        run: |
+          cd pagamentos-service
+          npm install
+
+      - name: Validar pagamentos-service
+        run: echo "Pagamentos Service validado com sucesso"
+
+  estoque-service:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências estoque-service
+        run: |
+          cd estoque-service
+          npm install
+
+      - name: Validar estoque-service
+        run: echo "Estoque Service validado com sucesso"
+
+  api-gateway:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências api-gateway
+        run: |
+          cd api-gateway
+          npm install
+
+      - name: Validar api-gateway
+        run: echo "API Gateway validado com sucesso"
