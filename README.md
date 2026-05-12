@@ -6,6 +6,25 @@ Projeto acadêmico cloud-native baseado em arquitetura de microsserviços utiliz
 
 ---
 
+# 📄 Relatório Técnico
+
+O relatório técnico completo do projeto está disponível no arquivo:
+
+📎 `Relatorio_Tecnico_Pedido_Veloz_DevOps_Joice_Barbosa_Santos.pdf`
+
+O documento contém:
+
+* arquitetura cloud-native
+* Docker Compose
+* Kubernetes
+* microsserviços
+* observabilidade
+* Terraform
+* CI/CD
+* evidências práticas da execução
+
+---
+
 # 📋 Sumário
 
 * [Sobre o Projeto](#-sobre-o-projeto)
