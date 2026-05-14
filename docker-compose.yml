@@ -59,8 +59,34 @@ services:
     networks:
       - pedido-veloz-network
 
+  prometheus:
+    image: prom/prometheus
+
+    container_name: prometheus
+
+    ports:
+      - "9090:9090"
+
+    volumes:
+      - ./observability/prometheus.yml:/etc/prometheus/prometheus.yml
+
+    networks:
+      - pedido-veloz-network
+
+  grafana:
+    image: grafana/grafana
+
+    container_name: grafana
+
+    ports:
+      - "3004:3000"
+
+    networks:
+      - pedido-veloz-network
+
 volumes:
   postgres_data:
 
 networks:
   pedido-veloz-network:
+    driver: bridge
