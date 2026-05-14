@@ -220,11 +220,13 @@ pedido-veloz-devops/
 │       ├── docker-compose-running.png
 │       ├── docker-ps-running.png
 │       ├── estoque-service-online.png
+|       ├── grafana-dashboard-metrics.png
 │       ├── kubernetes-deployments-services.png
 │       ├── kubernetes-get-all.png
 │       ├── kubernetes-running.png
 │       ├── pagamentos-service-online.png
 │       └── pedidos-service-online.png
+|       └── prometheus.running.png
 │
 ├── docker-compose.yml
 ├── README.md
