@@ -25,6 +25,14 @@ O documento contém:
 
 ---
 
+# 🎥 Vídeo Pitch
+
+O vídeo demonstrando a arquitetura, containers, Kubernetes, CI/CD e observabilidade está disponível em:
+
+https://www.youtube.com/watch?v=YU5SJtlwBlg
+
+---
+
 # 📋 Sumário
 
 * [Sobre o Projeto](#-sobre-o-projeto)
